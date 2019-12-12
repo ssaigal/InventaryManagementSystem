@@ -1,7 +1,5 @@
-package com.store.inventory.InventoryManagementSystem.service;
+package com.store.inventory.InventoryManagementSystem;
 
-import com.store.inventory.InventoryManagementSystem.repository.InventoryRepository;
-import com.store.inventory.InventoryManagementSystem.model.Inventory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

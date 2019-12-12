@@ -1,7 +1,7 @@
 package com.store.inventory.InventoryManagementSystem.controller;
 
-import com.store.inventory.InventoryManagementSystem.model.Inventory;
-import com.store.inventory.InventoryManagementSystem.service.InventoryService;
+import com.store.inventory.InventoryManagementSystem.Inventory;
+import com.store.inventory.InventoryManagementSystem.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

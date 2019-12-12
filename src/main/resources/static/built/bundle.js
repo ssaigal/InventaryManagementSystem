@@ -33943,23 +33943,19 @@ function (_React$Component) {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       event.preventDefault();
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.put("".concat(this.props.source, "/").concat(this.state.id, "/").concat(this.state.qty)).then(function (res) {
-        console.log(res);
-        console.log(res.data);
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.put("".concat(this.props.source, "/").concat(this.state.id, "/").concat(this.state.qty)).then(function (response) {
+        console.log(response);
+      })["catch"](function (error) {
+        console.log(error.response);
       });
       this.setState({
         id: '',
         qty: ''
-      }); //fetchdata()
+      });
     }
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      fetchdata();
-    }
-  }, {
-    key: "fetchdata",
-    value: function fetchdata() {
       var th = this;
       this.serverRequest = axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(this.props.source).then(function (event) {
         th.setState({
@@ -33989,7 +33985,7 @@ function (_React$Component) {
         className: "title"
       }, "Products Inventory"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Id"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Item"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Quantity"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this.state.data.map(function (i) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, i.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, i.item), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, i.quantity));
-      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Id:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",

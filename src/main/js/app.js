@@ -23,25 +23,22 @@ onChange = (e) => {
 handleSubmit(event) {
     event.preventDefault();
     axios.put(`${this.props.source}/${this.state.id}/${this.state.qty}`)
-          .then(res => {
-            console.log(res);
-            console.log(res.data);
+          .then(response => {
+          	console.log(response)
           })
+          .catch(error => {
+              console.log(error.response)
+          });
      this.setState({
       id: '',
       qty: ''
     });
-    //fetchdata()
   }
 
 
 
 componentDidMount() {
- fetchdata()
-}
-
-fetchdata(){
-var th = this;
+ var th = this;
  this.serverRequest = axios.get(this.props.source)
  .then(function(event) {
      th.setState({
@@ -49,6 +46,8 @@ var th = this;
      });
  })
 }
+
+
 
 componentWillUnmount() {
   this.serverRequest.abort();
@@ -86,7 +85,7 @@ if (!this.state.data) {
             </table>
          </div>
       </div>
-
+        <br></br>
       <form onSubmit={this.handleSubmit}>
               <label>
                 Id:

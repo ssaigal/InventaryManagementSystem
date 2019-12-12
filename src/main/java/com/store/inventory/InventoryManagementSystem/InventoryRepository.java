@@ -1,6 +1,5 @@
-package com.store.inventory.InventoryManagementSystem.repository;
+package com.store.inventory.InventoryManagementSystem;
 
-import com.store.inventory.InventoryManagementSystem.model.Inventory;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

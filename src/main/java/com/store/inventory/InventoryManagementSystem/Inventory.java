@@ -1,4 +1,4 @@
-package com.store.inventory.InventoryManagementSystem.model;
+package com.store.inventory.InventoryManagementSystem;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
