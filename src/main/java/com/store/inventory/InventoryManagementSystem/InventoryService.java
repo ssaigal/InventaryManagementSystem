@@ -29,7 +29,7 @@ public class InventoryService {
         ResponseEntity<Object> update(long id, int quantity) {
             Inventory inventory = inventoryRepository.findById(id).get();
             int availableQty = inventory.getQuantity();
-            if(quantity < availableQty) {
+            if(quantity <= availableQty) {
                 inventory.setQuantity(inventory.getQuantity() - quantity);
                 inventoryRepository.save(inventory);
                 return  ResponseEntity.ok(HttpStatus.OK);
